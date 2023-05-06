@@ -575,6 +575,7 @@ border-radius: 4px;
 }
 
 /* ---------------------Modal window--------- */
+
 .backdrop {
     /* display: none; */
     width: 100vw;
@@ -609,7 +610,7 @@ border-radius: 4px;
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
     transform: translate(-50%, -50%) scale(1);
-    transition: opasity 250ms easy-in, transform 700ms easy-in ;
+    transition: scale 250ms easy-in, transform 700ms easy-in ;
 
 }
 
