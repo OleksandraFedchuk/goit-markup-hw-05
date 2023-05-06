@@ -13,7 +13,7 @@
 </head>
 <body>
   <!-- Шапка -->
-      <header class="header">
+      <header class="header" data-header>
         <div class="container container-header">
          <nav class="navigation-list">
           <a href="./index.html" class="main-logo link">Web<span class="main-logo-studio link">Studio</span></a>
@@ -37,7 +37,7 @@
        <div class="container .container-description">
           <h1 class="descrition-title">Effective Solutions
             <span>for Your Business</span></h1>
-          <button type="button" class="description-btn">Order Service</button>
+          <button type="button" class="description-btn" data-modal-open>Order Service</button>
        </div>
       </section>
       
@@ -293,16 +293,18 @@
       </div >
   </footer>
   <!---------------------------Modal window--------------------->
-<div class="backdrop">
-  <div class="modal">
-    <button class="modal-btn">
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal" >
+    <button class="modal-btn" data-modal-close>
       <svg class="modal-icon" width="8" height="8">
         <use href="./images/icons.svg#icon-close-iconn" ></use>
       </svg>
     </button>
   </div>
 </div>
-
+<!----------------SCRIPT------------------- -->
+<script src="./js/header.js"></script>
+<script src="./js/modal.js"></script>
 </body>
 </html>
 

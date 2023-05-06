@@ -1,9 +1,13 @@
 :root {
+    /*        COLOR               */
     --main-title-color: #ffffff; 
     --second-title-color: #2E2F42;
     --third-title-color: #434455 ;
     --forth-title-color: #f4f4fd;
     --fifth-color: #8e8f99;
+    /*         ANIMATION        */
+    --anim-f: 200ms ease-in;
+    --anim-s: 800ms ease;
 
 
 }
@@ -64,7 +68,7 @@ letter-spacing: 0.02em;
     padding-left: 15px;
     padding-right: 15px;
     margin: 0 auto;
-    outline: 1px solid #404bbf;
+    /* outline: 1px solid #404bbf; */
 }
 .container-header {
     display: flex;
@@ -74,15 +78,27 @@ letter-spacing: 0.02em;
    
 }
 .header {
+    position: fixed;
+    top:0;
+    z-index: 10;
 color:#FFFFFF ;
 padding-top: 24px;
 padding-bottom: 24px;
 border: 1px solid #E7E9FC;
 box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
-position: fixed;
-top:0;
+
 width: 100%;
+
+transition: background-color var(--anim-s), backdrop-filter var(--anim-s);
+
 }
+
+.header.no-transparency {
+    background-color: rgba(17, 19, 25, 0.4);
+    backdrop-filter: blur(7px);
+}
+
+
 
 .navigation-list{
     display: flex;
@@ -102,7 +118,7 @@ letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #4D5AE5;
 padding: 0px; 
-
+transition: fill var(--anim-s) ;
 
 }
 
@@ -165,7 +181,7 @@ color: #404bbf;
 .header-link::after {
     content: '';
     position:absolute;
-    top: 20px;
+    top: 30px;
     left:0;
     height: 4px; ;
     width: 100%;
@@ -560,24 +576,31 @@ border-radius: 4px;
 
 /* ---------------------Modal window--------- */
 .backdrop {
-    display: none;
+    /* display: none; */
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 100;
     background-color:rgba(46, 47, 66, 0.4);
     backdrop-filter: blur(2px);
 
+    transition: opacity var(--anim-f), visibility var(--anim-f) ;
+    
+
+}
+
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events:none;
+    transition-delay: 750ms;
 }
 .modal {
     position:absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%) scale(1);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     min-width: 408px;
     min-height: 576px;
     background-color: var(--main-title-color);
@@ -585,8 +608,18 @@ border-radius: 4px;
     0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
+    transform: translate(-50%, -50%) scale(1);
+    transition: opasity 250ms easy-in, transform 700ms easy-in ;
 
 }
+
+.backdrop.is-hidden .modal {
+opacity: 0;
+transform: translate(-50%, -70%);
+transition-delay: 300ms ;
+}
+
+
 .modal-btn {
     position: absolute;
     top: 24px;
