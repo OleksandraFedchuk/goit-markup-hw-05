@@ -81,7 +81,7 @@ letter-spacing: 0.02em;
    
 }
 .header {
-    position: fixed;
+    /* position: fixed; */
     top:0;
     z-index: 10;
 color:#FFFFFF ;
