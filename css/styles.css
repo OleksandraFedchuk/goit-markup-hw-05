@@ -175,7 +175,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 color: var(--seventh-color);
 }
 
-.header-link::after {
+.header-link.active::after {
     content: '';
     position:absolute;
     bottom: -1px;
@@ -185,13 +185,12 @@ color: var(--seventh-color);
     border-radius: 2px;
     display: block;
     color: #404bbf;
-
-
-}
-
-.header-link.active::after{
     background-color: #404BBF;
+
+
 }
+
+
 
 .adress {
 font-style:normal;
