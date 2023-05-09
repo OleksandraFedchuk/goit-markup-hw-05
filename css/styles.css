@@ -190,9 +190,9 @@ color: var(--seventh-color);
 
 }
 
-.header-link.active::after{
+/* .header-link.active::after{
     
-}
+} */
 
 .adress {
 font-style:normal;
