@@ -177,7 +177,7 @@ color: var(--seventh-color);
 
 .active::after {
     content: '';
-    position:absolute;
+    /* position:absolute; */
     bottom: -1px;
     left:0;
     height: 4px; ;
@@ -190,9 +190,7 @@ color: var(--seventh-color);
 
 }
 
-/* .header-link.active::after{
-    
-} */
+
 
 .adress {
 font-style:normal;
