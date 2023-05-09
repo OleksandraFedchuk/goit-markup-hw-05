@@ -175,7 +175,7 @@ transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 color: var(--seventh-color);
 }
 
-.header-link.active::after {
+.active::after {
     content: '';
     position:absolute;
     bottom: -1px;
