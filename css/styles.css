@@ -177,7 +177,7 @@ color: var(--seventh-color);
 
 .active::after {
     content: '';
-    /* position:absolute; */
+    position:absolute;
     bottom: -1px;
     left:0;
     height: 4px; ;
